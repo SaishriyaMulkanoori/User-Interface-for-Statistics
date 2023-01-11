@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img"
+        android:textColor="@color/black"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginStart="0dp"
+
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/img"
+        tools:text="jan 12 2022" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="204dp"
+
+        android:layout_toEndOf="@+id/time"
+        android:textColor="#FF5722"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="-$ 150" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/img"
+        android:layout_marginTop="10dp"
+        android:background="#DAD8D8"/>
+
+
+</RelativeLayout>

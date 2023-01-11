@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="414dp"
+
+        android:layout_height="159dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="411dp"
+            android:layout_height="268dp"
+            android:layout_marginBottom="277dp">
+
+            <include layout="@layout/act2" />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="162dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="509dp"
+        android:background="@android:drawable/btn_dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.111">
+
+    </Spinner>
+
+
+    <org.eazegraph.lib.charts.ValueLineChart
+        android:id="@+id/valuelinechart"
+        android:layout_width="411dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="299dp"
+        app:egCurveSmoothness="0.4"
+        app:egIndicatorLineColor="#FE6DA8"
+        app:egLegendHeight="40dp"
+        app:egShowStandardValue="true"
+        app:egUseCubic="true"
+        app:egUseOverlapFill="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.398"
+        tools:ignore="MissingClass" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="52dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/valuelinechart"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/ic_baseline_import_export_24" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="344dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="75dp">
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="389dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="340dp"
+        android:layout_marginBottom="39dp"
+        android:text="Top Spending"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#0E0E0E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valuelinechart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

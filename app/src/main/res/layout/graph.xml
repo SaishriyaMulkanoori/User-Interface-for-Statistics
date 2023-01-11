@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <org.eazegraph.lib.charts.ValueLineChart
+        android:id="@+id/valuelinechart"
+        android:layout_width="wrap_content"
+        android:layout_height="166dp"
+        android:layout_marginBottom="564dp"
+        app:egCurveSmoothness="0.4"
+        app:egIndicatorLineColor="#FE6DA8"
+        app:egLegendHeight="40dp"
+        app:egShowStandardValue="true"
+        app:egUseCubic="true"
+        app:egUseOverlapFill="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:ignore="MissingClass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

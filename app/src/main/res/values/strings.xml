@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment_UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="features">
+        <item>Expense</item>
+        <item>Balance</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
